@@ -2,13 +2,13 @@ version: '3.2'
 
 services:
   server:
-    image: nedb-excercise-server:1.0
+    image: nedb-excercise-server:${VERSION:-1.0}
     restart: unless-stopped
     ports:
       - 3000:3000
 
   client:
-    image: nedb-excercise-client:1.0
+    image: nedb-excercise-client:${VERSION:-1.0}
     restart: unless-stopped
     ports:
       - 3001:3001
